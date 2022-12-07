@@ -199,8 +199,9 @@ class DataIngestion:
                 feature_store_file_path=feature_store_file_path,
                 download_dir=self.data_ingestion_config.download_dir,
                 metadata_file_path=self.data_ingestion_config.metadata_file_path,
-
             )
 
+            logger.info(f"Data ingestion artifact: {artifact}")
+            return artifact
         except Exception as e:
             raise FinanceException(e,sys)

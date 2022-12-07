@@ -7,10 +7,16 @@ class DataIngestionArtifact:
     metadata_file_path:str
     download_dir:str
 
-# DataIngestionArtifact = namedtuple("DataIngestionArtifact", ['feature_store_file_path','metadata_file_path','download_dir'])
 
 '''
 Both declarion is same and we can user any one for the artifact
 '''
 
+# DataIngestionArtifact = namedtuple("DataIngestionArtifact", ['feature_store_file_path','metadata_file_path','download_dir'])
+
+
+@dataclass
+class DataValidationArtifact:
+    accepted_file_path:str
+    rejected_dir:str
 
